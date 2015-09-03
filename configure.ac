@@ -188,7 +188,7 @@ case "${host_os}" in
         LDFLAGS="-lssp $LDFLAGS"
         CPPFLAGS="$CPPFLAGS -Wno-long-long"
         ;;
-    *freebsd*)
+    *freebsd* | *dragonfly* )
         # Define on FreeBSD to enable all library features
         CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
         AC_DEFINE(ZMQ_HAVE_FREEBSD, 1, [Have FreeBSD OS])
